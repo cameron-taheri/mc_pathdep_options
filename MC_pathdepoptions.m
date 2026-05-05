@@ -233,7 +233,8 @@ N = T / dt;             % total time in years (3600 days)
 % Euler-Maruyama Discretization
 % ------------------------------------------------------------------------
 % continuous Vasicek: dr(t) = k(r_ss - r(t)*dt + sigma*dW(t)
-% discrete (E-M) Vasicek: r(t+dt) = r(t) + k(r_ss - r(t))*dt + sigma*randn
+% discrete (E-M) Vasicek: r(t+dt) = r(t) + k(r_ss - r(t))*dt + sigma*dW
+% where dW is defined as before to be dW = sqrt(dt) * randn
 % simulating one path for the ST RF Rate
 
 r = zeros(1, N);  % initialize vector of interest rates
